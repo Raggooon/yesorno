@@ -1,16 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
     const btnYes = document.getElementById('btnYes');
     const btnNo = document.getElementById('btnNo');
-    const container = document.getElementById('questionContainer');
+    const questionText = document.querySelector('.question-container h1');
 
     btnYes.addEventListener('click', () => {
-        // Remove buttons
-        btnYes.classList.add('hidden');
-        btnNo.classList.add('hidden');
-        // Display the message
-        const yesMessage = document.createElement('h2');
-        yesMessage.textContent = "Yes!!!!!";
-        container.appendChild(yesMessage);
+        // Change the question text to "Yes!!!!"
+        questionText.textContent = "Yes!!!!!";
+        // Hide the buttons
+        btnYes.style.display = 'none';
+        btnNo.style.display = 'none';
     });
 
     btnNo.addEventListener('click', () => {
