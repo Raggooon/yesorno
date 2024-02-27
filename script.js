@@ -16,3 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     btnNo.addEventListener('click', handleNoClick);
 });
+
+function changeColor(button, originalColor, newColor) {
+    const currentColor = button.style.backgroundColor;
+    button.style.backgroundColor = currentColor === newColor ? originalColor : newColor;
+}
