@@ -9,47 +9,41 @@
         body {
             display: flex;
             flex-direction: column;
-            justify-content: start; /* Align items to the start (top) of the page */
+            justify-content: center; /* Center content vertically */
             align-items: center;
             height: 100vh;
             background-color: #f5f5dc; /* Cream white background */
             color: #db7093; /* Slightly darker pink text */
             margin: 0;
-            padding: 20px 0; /* Add padding to the top */
-            font-family: 'Nimbus Mono', monospace; /* Nimbus Mono Bold */
-        }
-        .question-container {
-            text-align: center;
-            width: 100%; /* Ensure container takes full width */
+            padding: 0;
+            font-family: 'Nimbus Mono', monospace; /* Apply Nimbus Mono Bold font */
         }
         h1 {
-            font-size: 3rem; /* Larger text size */
-            margin-bottom: 30px; /* Add some spacing below the heading */
+            font-size: 3rem; /* Increased text size */
+            margin: 0 0 20px; /* Adjusted margin for bottom spacing */
+            text-align: center; /* Ensure text is centered */
         }
         .btn {
             cursor: pointer;
-            padding: 20px 40px; /* Significantly larger button size */
-            margin: 10px; /* Keep some margin */
-            border: 2px solid #db7093; /* Border color similar to the text */
-            border-radius: 5px;
-            font-size: 1.5rem; /* Larger font size for buttons */
-            transition: background-color 0.3s ease;
+            padding: 20px 40px; /* Significantly larger buttons */
+            margin: 10px;
+            border: 3px solid #db7093; /* Adjust border thickness */
+            border-radius: 8px;
+            font-size: 1.5rem; /* Larger font size */
+            transition: background-color 0.3s, color 0.3s;
             background-color: #ffd1dc; /* Lighter pink background for buttons */
             color: #db7093; /* Slightly darker pink text */
-            font-weight: bold; /* Ensure the font is bold */
+            font-family: 'Nimbus Mono', monospace; /* Apply Nimbus Mono Bold font */
         }
         .btn:hover {
             background-color: #db7093; /* Darker pink on hover */
             color: #f5f5dc; /* Cream white text on hover */
         }
-        .hidden {
-            display: none;
-        }
     </style>
 </head>
 <body>
-    <div class="question-container" id="questionContainer">
-        <h1 id="questionText">Will you be my girlfriend?</h1>
+    <div class="question-container">
+        <h1>Will you be my girlfriend?</h1>
         <button class="btn btn-yes" id="btnYes">Yes</button>
         <button class="btn btn-no" id="btnNo">No</button>
     </div>
