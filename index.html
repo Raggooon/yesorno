@@ -11,8 +11,8 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #8B0000; /* Dark red background */
-            color: white; /* Lighter text for contrast */
+            background-color: #f5f5dc; /* Cream white background */
+            color: #ffb6c1; /* Light pink text */
             margin: 0;
             padding: 0;
         }
@@ -32,14 +32,18 @@
             border-radius: 5px;
             font-size: 1.25rem; /* Larger font size for button text */
             transition: transform 0.3s ease, font-size 0.3s ease;
+            color: #ffb6c1; /* Light pink text for buttons */
+            background-color: transparent; /* Transparent background for buttons */
+        }
+        .btn:hover {
+            background-color: #ffb6c1; /* Light pink background for buttons on hover */
+            color: #f5f5dc; /* Cream white text on hover */
         }
         .btn-yes {
-            background-color: #4ade80;
-            color: white;
+            /* Additional styling for the "Yes" button if needed */
         }
         .btn-no {
-            background-color: #f87171;
-            color: white;
+            /* Additional styling for the "No" button if needed */
         }
         .hidden {
             display: none;
@@ -59,9 +63,8 @@
         <button class="btn btn-yes" id="btnYes">Yes</button>
         <button class="btn btn-no" id="btnNo">No</button>
         <div class="image-container hidden" id="imageContainer">
-            <!-- Make sure to replace 'yourusername' and 'yourrepository' with the actual ones -->
-            <img src="https://raw.githubusercontent.com/Raggooon/https://github.com/Raggooon/yesorno/main/heart.png" alt="Heart">
-            <img src="https://raw.githubusercontent.com/Raggooon/https://github.com/Raggooon/yesorno/main/floof.png" alt="Floof">
+            <img src="/floof.png" alt="Floof">
+            <img src="/heart.png" alt="Heart">
         </div>
     </div>
     <script src="script.js"></script>
