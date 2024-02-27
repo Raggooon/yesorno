@@ -1,7 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const btnYes = document.getElementById('btnYes');
     const btnNo = document.getElementById('btnNo');
+    const container = document.getElementById('questionContainer');
 
-    function handleNoClick() {
+    btnYes.addEventListener('click', () => {
+        // Remove buttons
+        btnYes.classList.add('hidden');
+        btnNo.classList.add('hidden');
+        // Display the message
+        const yesMessage = document.createElement('h2');
+        yesMessage.textContent = "Yes!!!!!";
+        container.appendChild(yesMessage);
+    });
+
+    btnNo.addEventListener('click', () => {
         if (window.innerWidth <= 480) { // Mobile behavior
             const currentSize = parseFloat(window.getComputedStyle(btnNo).fontSize);
             btnNo.style.fontSize = `${Math.max(currentSize - 2, 10)}px`;
@@ -12,12 +24,5 @@ document.addEventListener('DOMContentLoaded', () => {
             btnNo.style.left = `${x}px`;
             btnNo.style.top = `${y}px`;
         }
-    }
-
-    btnNo.addEventListener('click', handleNoClick);
+    });
 });
-
-function changeColor(button, originalColor, newColor) {
-    const currentColor = button.style.backgroundColor;
-    button.style.backgroundColor = currentColor === newColor ? originalColor : newColor;
-}
