@@ -8,42 +8,37 @@
         body {
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: start; /* Align items to the start (top) of the page */
             align-items: center;
             height: 100vh;
             background-color: #f5f5dc; /* Cream white background */
-            color: #ffb6c1; /* Light pink text */
+            color: #db7093; /* Slightly darker pink text */
             margin: 0;
-            padding: 0;
+            padding: 20px 0; /* Add padding to the top */
         }
         .question-container {
             text-align: center;
             font-family: 'Arial', sans-serif;
+            width: 100%; /* Ensure container takes full width */
         }
         h1 {
             font-size: 2.5rem; /* Larger text size */
-            margin: 20px;
+            margin-bottom: 20px; /* Add some spacing below the heading */
         }
         .btn {
             cursor: pointer;
-            padding: 15px 30px; /* Larger button size */
-            margin: 10px;
-            border: 2px solid black; /* Black border */
+            padding: 10px 20px; /* Adjust button size */
+            margin: 5px; /* Reduce margin for a closer look */
+            border: 2px solid #db7093; /* Border color similar to the text */
             border-radius: 5px;
-            font-size: 1.25rem; /* Larger font size for button text */
-            transition: transform 0.3s ease, font-size 0.3s ease;
-            color: #ffb6c1; /* Light pink text for buttons */
-            background-color: transparent; /* Transparent background for buttons */
+            font-size: 1rem; /* Adjust font size */
+            transition: background-color 0.3s ease;
+            background-color: #ffd1dc; /* Lighter pink background for buttons */
+            color: #db7093; /* Slightly darker pink text */
         }
         .btn:hover {
-            background-color: #ffb6c1; /* Light pink background for buttons on hover */
+            background-color: #db7093; /* Darker pink on hover */
             color: #f5f5dc; /* Cream white text on hover */
-        }
-        .btn-yes {
-            /* Additional styling for the "Yes" button if needed */
-        }
-        .btn-no {
-            /* Additional styling for the "No" button if needed */
         }
         .hidden {
             display: none;
