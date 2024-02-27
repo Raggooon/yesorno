@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Special Question</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nimbus+Mono:wght@700&display=swap" rel="stylesheet">
     <style>
         body {
             display: flex;
@@ -15,26 +16,27 @@
             color: #db7093; /* Slightly darker pink text */
             margin: 0;
             padding: 20px 0; /* Add padding to the top */
+            font-family: 'Nimbus Mono', monospace; /* Nimbus Mono Bold */
         }
         .question-container {
             text-align: center;
-            font-family: 'Arial', sans-serif;
             width: 100%; /* Ensure container takes full width */
         }
         h1 {
-            font-size: 2.5rem; /* Larger text size */
-            margin-bottom: 20px; /* Add some spacing below the heading */
+            font-size: 3rem; /* Larger text size */
+            margin-bottom: 30px; /* Add some spacing below the heading */
         }
         .btn {
             cursor: pointer;
-            padding: 10px 20px; /* Adjust button size */
-            margin: 5px; /* Reduce margin for a closer look */
+            padding: 20px 40px; /* Significantly larger button size */
+            margin: 10px; /* Keep some margin */
             border: 2px solid #db7093; /* Border color similar to the text */
             border-radius: 5px;
-            font-size: 1rem; /* Adjust font size */
+            font-size: 1.5rem; /* Larger font size for buttons */
             transition: background-color 0.3s ease;
             background-color: #ffd1dc; /* Lighter pink background for buttons */
             color: #db7093; /* Slightly darker pink text */
+            font-weight: bold; /* Ensure the font is bold */
         }
         .btn:hover {
             background-color: #db7093; /* Darker pink on hover */
@@ -43,13 +45,6 @@
         .hidden {
             display: none;
         }
-        .image-container {
-            margin-top: 20px;
-        }
-        .image-container img {
-            max-width: 100px; /* Setting a max-width for images */
-            margin: 10px;
-        }
     </style>
 </head>
 <body>
@@ -57,10 +52,6 @@
         <h1 id="questionText">Will you be my girlfriend?</h1>
         <button class="btn btn-yes" id="btnYes">Yes</button>
         <button class="btn btn-no" id="btnNo">No</button>
-        <div class="image-container hidden" id="imageContainer">
-            <img src="/floof.png" alt="Floof">
-            <img src="/heart.png" alt="Heart">
-        </div>
     </div>
     <script src="script.js"></script>
 </body>
