@@ -10,25 +10,11 @@ document.addEventListener('DOMContentLoaded', () => {
         // Hide the buttons
         btnYes.style.display = 'none';
         btnNo.style.display = 'none';
-        // Show the images for both mobile and desktop
+        // Show the images
         imageContainer.classList.remove('hidden');
     });
 
     btnNo.addEventListener('click', () => {
-        if (window.innerWidth <= 480) { // Mobile behavior
-            // Shrink the "No" button
-            const currentSizeNo = parseFloat(window.getComputedStyle(btnNo).fontSize);
-            btnNo.style.fontSize = `${Math.max(currentSizeNo - 2, 10)}px`;
-            // Grow the "Yes" button
-            const currentSizeYes = parseFloat(window.getComputedStyle(btnYes).fontSize);
-            btnYes.style.fontSize = `${Math.min(currentSizeYes + 2, 30)}px`;
-        } else { // Desktop behavior
-            // Move the "No" button to a random position within the viewport
-            btnNo.style.position = 'absolute';
-            const x = Math.random() * (window.innerWidth - btnNo.clientWidth);
-            const y = Math.random() * (window.innerHeight - btnNo.clientHeight);
-            btnNo.style.left = `${x}px`;
-            btnNo.style.top = `${y}px`;
-        }
+        // Implement the "No" button behavior as desired
     });
 });
