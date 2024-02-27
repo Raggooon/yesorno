@@ -29,7 +29,7 @@
             border: 2px solid black; /* Black border */
             border-radius: 5px;
             font-size: 1.25rem; /* Larger font size for button text */
-            transition: transform 0.3s ease, background-color 0.3s ease; /* Transition for background-color */
+            transition: transform 0.3s ease;
         }
         .btn-yes {
             background-color: #4ade80;
@@ -39,13 +39,16 @@
             background-color: #f87171;
             color: white;
         }
+        .hidden {
+            display: none;
+        }
     </style>
 </head>
 <body>
-    <div class="question-container">
+    <div class="question-container" id="questionContainer">
         <h1>Will you be my girlfriend?</h1>
-        <button class="btn btn-yes" onclick="changeColor(this, '#4ade80', '#22c55e')">Yes</button>
-        <button class="btn btn-no" id="btnNo" onclick="changeColor(this, '#f87171', '#ef4444')">No</button>
+        <button class="btn btn-yes" id="btnYes">Yes</button>
+        <button class="btn btn-no" id="btnNo">No</button>
     </div>
     <script src="script.js"></script>
 </body>
