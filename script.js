@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Hide the buttons
         btnYes.style.display = 'none';
         btnNo.style.display = 'none';
-        // Show the images
+        // Show the images for both mobile and desktop
         imageContainer.classList.remove('hidden');
     });
 
