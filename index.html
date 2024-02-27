@@ -4,40 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Special Question</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nimbus+Mono:wght@700&display=swap" rel="stylesheet">
     <style>
         body {
             display: flex;
-            flex-direction: column;
-            justify-content: center; /* Center content vertically */
+            justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #f5f5dc; /* Cream white background */
-            color: #db7093; /* Slightly darker pink text */
-            margin: 0;
-            padding: 0;
-            font-family: 'Nimbus Mono', monospace; /* Apply Nimbus Mono Bold font */
+            background-color: #8B0000; /* Dark red background */
+            color: white; /* Lighter text for contrast */
+        }
+        .question-container {
+            text-align: center;
+            font-family: 'Nimbus Mono', monospace; /* Applying Nimbus Mono Bold */
         }
         h1 {
-            font-size: 3rem; /* Increased text size */
-            margin: 0 0 20px; /* Adjusted margin for bottom spacing */
-            text-align: center; /* Ensure text is centered */
+            font-size: 2.5rem; /* Larger text size */
+            margin-bottom: 20px;
         }
         .btn {
             cursor: pointer;
-            padding: 20px 40px; /* Significantly larger buttons */
+            padding: 20px 40px; /* Significantly larger button size */
             margin: 10px;
-            border: 3px solid #db7093; /* Adjust border thickness */
-            border-radius: 8px;
-            font-size: 1.5rem; /* Larger font size */
-            transition: background-color 0.3s, color 0.3s;
-            background-color: #ffd1dc; /* Lighter pink background for buttons */
-            color: #db7093; /* Slightly darker pink text */
-            font-family: 'Nimbus Mono', monospace; /* Apply Nimbus Mono Bold font */
+            border: 2px solid black; /* Black border */
+            border-radius: 5px;
+            font-size: 1.5rem; /* Increased font size for button text */
+            transition: transform 0.3s ease;
+            font-family: 'Nimbus Mono', monospace; /* Ensuring font consistency */
+            background-color: #4ade80; /* Consistent button color */
+            color: white;
         }
-        .btn:hover {
-            background-color: #db7093; /* Darker pink on hover */
-            color: #f5f5dc; /* Cream white text on hover */
+        .btn-no {
+            background-color: #f87171;
         }
     </style>
 </head>
@@ -47,6 +46,33 @@
         <button class="btn btn-yes" id="btnYes">Yes</button>
         <button class="btn btn-no" id="btnNo">No</button>
     </div>
-    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const btnYes = document.getElementById('btnYes');
+            const btnNo = document.getElementById('btnNo');
+            const questionText = document.querySelector('.question-container h1');
+
+            btnYes.addEventListener('click', () => {
+                // Change the question text to "Yes!!!!"
+                questionText.textContent = "Yes!!!!!";
+                // Hide the buttons
+                btnYes.style.display = 'none';
+                btnNo.style.display = 'none';
+            });
+
+            btnNo.addEventListener('click', () => {
+                if (window.innerWidth <= 480) { // Mobile behavior
+                    const currentSize = parseFloat(window.getComputedStyle(btnNo).fontSize);
+                    btnNo.style.fontSize = `${Math.max(currentSize - 2, 10)}px`;
+                } else { // Desktop behavior
+                    btnNo.style.position = 'absolute';
+                    const x = Math.random() * (window.innerWidth - btnNo.clientWidth);
+                    const y = Math.random() * (window.innerHeight - btnNo.clientHeight);
+                    btnNo.style.left = `${x}px`;
+                    btnNo.style.top = `${y}px`;
+                }
+            });
+        });
+    </script>
 </body>
 </html>
