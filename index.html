@@ -3,16 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Special Question</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css" rel="stylesheet">
+    <title>Yes or No?</title>
     <style>
         body {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
             background-color: #8B0000; /* Dark red background */
             color: white; /* Lighter text for contrast */
+            margin: 0;
+            padding: 0;
         }
         .question-container {
             text-align: center;
@@ -20,7 +22,7 @@
         }
         h1 {
             font-size: 2.5rem; /* Larger text size */
-            margin-bottom: 20px;
+            margin: 20px;
         }
         .btn {
             cursor: pointer;
@@ -29,7 +31,7 @@
             border: 2px solid black; /* Black border */
             border-radius: 5px;
             font-size: 1.25rem; /* Larger font size for button text */
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, font-size 0.3s ease;
         }
         .btn-yes {
             background-color: #4ade80;
@@ -39,13 +41,27 @@
             background-color: #f87171;
             color: white;
         }
+        .hidden {
+            display: none;
+        }
+        .image-container {
+            margin-top: 20px;
+        }
+        .image-container img {
+            max-width: 100px; /* Setting a max-width for images */
+            margin: 10px;
+        }
     </style>
 </head>
 <body>
-    <div class="question-container">
-        <h1>Will you be my girlfriend?</h1>
+    <div class="question-container" id="questionContainer">
+        <h1 id="questionText">Will you be my girlfriend?</h1>
         <button class="btn btn-yes" id="btnYes">Yes</button>
         <button class="btn btn-no" id="btnNo">No</button>
+        <div class="image-container hidden" id="imageContainer">
+            <img src="image-removebg-preview (1).png" alt="Heart">
+            <img src="image-removebg-preview.png" alt="Puppy">
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
